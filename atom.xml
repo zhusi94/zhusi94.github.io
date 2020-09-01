@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhusi94.github.io</id>
     <title>个人小站</title>
-    <updated>2020-09-01T02:27:58.090Z</updated>
+    <updated>2020-09-01T02:32:26.418Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhusi94.github.io"/>
     <link rel="self" href="https://zhusi94.github.io/atom.xml"/>
@@ -11,28 +11,28 @@
     <icon>https://zhusi94.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 个人小站</rights>
     <entry>
+        <title type="html"><![CDATA[dwadwadwadwa]]></title>
+        <id>https://zhusi94.github.io/post/dwadwadwadwa/</id>
+        <link href="https://zhusi94.github.io/post/dwadwadwadwa/">
+        </link>
+        <updated>2020-09-01T02:29:19.000Z</updated>
+        <content type="html"><![CDATA[<p>dasdadawdawdaw</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[第一篇文章]]></title>
         <id>https://zhusi94.github.io/post/di-yi-pian-wen-zhang/</id>
         <link href="https://zhusi94.github.io/post/di-yi-pian-wen-zhang/">
         </link>
         <updated>2020-09-01T01:44:52.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>    # 也不知道要写点什么.
-    
-    本人从转行前端以来已经工作一年有余，一直没有写过博客，希望从今天开
-    
-    始用博客记录一下工作和业务上的技术问题，以激励自己成长。
-
-    一年多以来主要接触过web端前端开发，前端框架为Vue，Jquery；UI库是公司自己基于
-    
-    element封装后的库，以及Layui。
-
-    还接触过一些地图方面的业务开发，百度地图api，argis，也还算比较熟悉。
-
-    最近也做了基于360°摄像机的全景展示，用的krpano工具，会在以后的博客中做具体介绍。
-
-    以上。
-    
-    请多指教。</code></pre>
+        <content type="html"><![CDATA[<h1 id="也不知道要写点什么">也不知道要写点什么。</h1>
+<p>本人从转行前端以来已经工作一年有余，一直没有写过博客，希望从今天开<br>
+始用博客记录一下工作和业务上的技术问题，以激励自己成长。<br>
+一年多以来主要接触过web端前端开发，前端框架为Vue，Jquery；UI库是公司自己基于element封装后的库，以及Layui。<br>
+还接触过一些地图方面的业务开发，百度地图api，argis，也还算比较熟悉。<br>
+最近也做了基于360°摄像机的全景展示，用的krpano工具，会在以后的博客中做具体介绍。</p>
+<p>以上。</p>
+<p>请多指教。</p>
 ]]></content>
     </entry>
 </feed>
