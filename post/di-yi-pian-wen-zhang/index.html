@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>第一篇文章 | Gridea</title>
-<link rel="shortcut icon" href="https://zhusi94.github.io/favicon.ico?v=1598925208289">
+<link rel="shortcut icon" href="https://zhusi94.github.io/favicon.ico?v=1598926695578">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://zhusi94.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="第一篇文章 | Gridea - Atom Feed" href="https://zhusi94.github.io/atom.xml">
@@ -11,11 +11,13 @@
 
 
 
-    <meta name="description" content="    也不知道要写点什么，本人从转行前端以来已经工作一年有余，一直没有写过博客，希望从今天开
+    <meta name="description" content="    # 也不知道要写点什么
+    
+    本人从转行前端以来已经工作一年有余，一直没有写过博客，希望从今天开
     
     始用博客记录一下工作和业务上的技术问题，以激励自己成长。
 
-    一年多以来主要接触过web端前端开发，前端框架为Vue，J..." />
+    一年多以来主要接触过web端前端开发..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +27,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://zhusi94.github.io">
-  <img class="avatar" src="https://zhusi94.github.io/images/avatar.png?v=1598925208289" alt="">
+  <img class="avatar" src="https://zhusi94.github.io/images/avatar.png?v=1598926695578" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -92,7 +94,9 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <pre><code>    也不知道要写点什么，本人从转行前端以来已经工作一年有余，一直没有写过博客，希望从今天开
+                <pre><code>    # 也不知道要写点什么
+    
+    本人从转行前端以来已经工作一年有余，一直没有写过博客，希望从今天开
     
     始用博客记录一下工作和业务上的技术问题，以激励自己成长。
 
@@ -118,6 +122,32 @@
 
         
 
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'ab260576543d0116a072',
+    clientSecret: 'ae36ff1eaf412e2c5203189e711b52472877ca3c',
+    repo: 'zhusi94.github.io',
+    owner: 'zhusi94',
+    admin: ['zhusi94'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
         
 
         <div class="site-footer">
