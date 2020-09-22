@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zhusi94.github.io/favicon.ico?v=1600763457762">
+<link rel="shortcut icon" href="https://zhusi94.github.io/favicon.ico?v=1600764327711">
 <link rel="stylesheet" href="https://zhusi94.github.io/styles/main.css">
 
 
@@ -25,9 +25,11 @@
 
 
     <meta name="description" content="echarts的柱状图有一个叠加的功能，但只能整体一层一层叠加。
-业务中遇到过需要无序叠加柱状图的需求， X横轴展示录像设备，Y轴展示0~24点的时间。
-一种颜色表示正常的录像时长，灰色表示关闭录像的时长。
-需求中的录像并非24小时监控录像..." />
+正常堆叠地柱状图，数据总是按照 legend 的顺序一层一层叠加的。
+
+这次的需求却不一样， 同种颜色可能会反复出现， 且无需。算是比较小众的需求了。
+
+业务中遇到过需要无序..." />
     <meta name="keywords" content="echarts,柱状图,数据可视化,无序堆叠柱状图,web前端,JavaScript" />
   </head>
   <body>
@@ -37,7 +39,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://zhusi94.github.io">
-        <img src="https://zhusi94.github.io/images/avatar.png?v=1600763457762" class="site-logo">
+        <img src="https://zhusi94.github.io/images/avatar.png?v=1600764327711" class="site-logo">
         <h1 class="site-title">个人小站</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -104,7 +106,11 @@
             
             <div class="post-content" v-pre>
               <p>echarts的柱状图有一个叠加的功能，但只能整体一层一层叠加。<br>
-业务中遇到过需要无序叠加柱状图的需求， X横轴展示录像设备，Y轴展示0~24点的时间。<br>
+正常堆叠地柱状图，数据总是按照 legend 的顺序一层一层叠加的。<br>
+<img src="https://zhusi94.github.io/post-images/1600764175366.png" alt="" loading="lazy"><br>
+这次的需求却不一样， 同种颜色可能会反复出现， 且无需。算是比较小众的需求了。<br>
+<img src="https://zhusi94.github.io/post-images/1600764275851.png" alt="" loading="lazy"></p>
+<p>业务中遇到过需要无序叠加柱状图的需求， X横轴展示录像设备，Y轴展示0~24点的时间。<br>
 一种颜色表示正常的录像时长，灰色表示关闭录像的时长。<br>
 需求中的录像并非24小时监控录像。所有会有这种展示录像时间的需求，单录像的时间点各个设备不可预知，所以需要无序的往柱状图上堆叠。</p>
 <p>目前想到的办法是主动生成有空数据的series元素。 echarts中遇到空数据的柱子会自动隐藏。在主动定义tooltip的函数隐藏掉数据为零的文字。<br>
@@ -296,6 +302,7 @@ var option = {
 
 </code></pre>
 <p>可直接在<a href="https://gallery.echartsjs.com/editor.html?c=xwQMgX6NpR&amp;v=1">示例中心</a>，查看预览效果。</p>
+<p>本示例仅使用了默认颜色，相关美化请自行完成。</p>
 <p>编辑tooltip函数的代码已省略， 请自行编辑</p>
 <p>不过， 该方法有个隐患是当数据量大的时候会生成大量series造成卡顿。<br>
 如有其他更好可以实现类似需求。欢迎联系我。</p>

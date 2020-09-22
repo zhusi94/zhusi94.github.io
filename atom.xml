@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhusi94.github.io</id>
     <title>个人小站</title>
-    <updated>2020-09-22T08:31:05.164Z</updated>
+    <updated>2020-09-22T08:45:31.382Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhusi94.github.io"/>
     <link rel="self" href="https://zhusi94.github.io/atom.xml"/>
@@ -51,7 +51,11 @@
         </link>
         <updated>2020-09-22T07:15:20.000Z</updated>
         <content type="html"><![CDATA[<p>echarts的柱状图有一个叠加的功能，但只能整体一层一层叠加。<br>
-业务中遇到过需要无序叠加柱状图的需求， X横轴展示录像设备，Y轴展示0~24点的时间。<br>
+正常堆叠地柱状图，数据总是按照 legend 的顺序一层一层叠加的。<br>
+<img src="https://zhusi94.github.io/post-images/1600764175366.png" alt="" loading="lazy"><br>
+这次的需求却不一样， 同种颜色可能会反复出现， 且无需。算是比较小众的需求了。<br>
+<img src="https://zhusi94.github.io/post-images/1600764275851.png" alt="" loading="lazy"></p>
+<p>业务中遇到过需要无序叠加柱状图的需求， X横轴展示录像设备，Y轴展示0~24点的时间。<br>
 一种颜色表示正常的录像时长，灰色表示关闭录像的时长。<br>
 需求中的录像并非24小时监控录像。所有会有这种展示录像时间的需求，单录像的时间点各个设备不可预知，所以需要无序的往柱状图上堆叠。</p>
 <p>目前想到的办法是主动生成有空数据的series元素。 echarts中遇到空数据的柱子会自动隐藏。在主动定义tooltip的函数隐藏掉数据为零的文字。<br>
@@ -243,6 +247,7 @@ var option = {
 
 </code></pre>
 <p>可直接在<a href="https://gallery.echartsjs.com/editor.html?c=xwQMgX6NpR&amp;v=1">示例中心</a>，查看预览效果。</p>
+<p>本示例仅使用了默认颜色，相关美化请自行完成。</p>
 <p>编辑tooltip函数的代码已省略， 请自行编辑</p>
 <p>不过， 该方法有个隐患是当数据量大的时候会生成大量series造成卡顿。<br>
 如有其他更好可以实现类似需求。欢迎联系我。</p>
