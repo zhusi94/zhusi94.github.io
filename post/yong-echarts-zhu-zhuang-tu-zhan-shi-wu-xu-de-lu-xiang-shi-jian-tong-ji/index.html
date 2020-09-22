@@ -1,22 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://zhusi94.github.io</id>
-    <title>个人小站</title>
-    <updated>2020-09-22T07:36:39.930Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://zhusi94.github.io"/>
-    <link rel="self" href="https://zhusi94.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://zhusi94.github.io/images/avatar.png</logo>
-    <icon>https://zhusi94.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 个人小站</rights>
-    <entry>
-        <title type="html"><![CDATA[用echarts柱状图展示无序的录像时间统计]]></title>
-        <id>https://zhusi94.github.io/post/yong-echarts-zhu-zhuang-tu-zhan-shi-wu-xu-de-lu-xiang-shi-jian-tong-ji/</id>
-        <link href="https://zhusi94.github.io/post/yong-echarts-zhu-zhuang-tu-zhan-shi-wu-xu-de-lu-xiang-shi-jian-tong-ji/">
-        </link>
-        <updated>2020-09-22T07:15:20.000Z</updated>
-        <content type="html"><![CDATA[<p>echarts的柱状图有一个叠加的功能，但只能整体一层一层叠加。<br>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>用echarts柱状图展示无序的录像时间统计 | 个人小站</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhusi94.github.io/favicon.ico?v=1600760193604">
+<link rel="stylesheet" href="https://zhusi94.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="echarts的柱状图有一个叠加的功能，但只能整体一层一层叠加。
+业务中遇到过需要无序叠加柱状图的需求， X横轴展示录像设备，Y轴展示0~24点的时间。
+一种颜色表示正常的录像时长，灰色表示关闭录像的时长。
+需求中的录像并非24小时监控录像..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhusi94.github.io">
+        <img src="https://zhusi94.github.io/images/avatar.png?v=1600760193604" class="site-logo">
+        <h1 class="site-title">个人小站</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zhusi94.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">用echarts柱状图展示无序的录像时间统计</h2>
+            <div class="post-date">2020-09-22</div>
+            
+            <div class="post-content" v-pre>
+              <p>echarts的柱状图有一个叠加的功能，但只能整体一层一层叠加。<br>
 业务中遇到过需要无序叠加柱状图的需求， X横轴展示录像设备，Y轴展示0~24点的时间。<br>
 一种颜色表示正常的录像时长，灰色表示关闭录像的时长。<br>
 需求中的录像并非24小时监控录像。所有会有这种展示录像时间的需求，单录像的时间点各个设备不可预知，所以需要无序的往柱状图上堆叠。</p>
@@ -212,22 +299,80 @@ var option = {
 <p>编辑tooltip函数的代码已省略， 请自行编辑</p>
 <p>不过， 该方法有个隐患是当数据量大的时候会生成大量series造成卡顿。<br>
 如有其他更好可以实现类似需求。欢迎联系我。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第一篇文章]]></title>
-        <id>https://zhusi94.github.io/post/di-yi-pian-wen-zhang/</id>
-        <link href="https://zhusi94.github.io/post/di-yi-pian-wen-zhang/">
-        </link>
-        <updated>2020-09-01T01:44:52.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="也不知道要写点什么">也不知道要写点什么。</h1>
-<p>本人从转行前端以来已经工作一年有余，一直没有写过博客，希望从今天开<br>
-始用博客记录一下工作和业务上的技术问题，以激励自己成长。<br>
-一年多以来主要接触过web端前端开发，前端框架为Vue，Jquery；UI库是公司自己基于element封装后的库，以及Layui。<br>
-还接触过一些地图方面的业务开发，百度地图api，argis，也还算比较熟悉。<br>
-最近也做了基于360°摄像机的全景展示，用的krpano工具，会在以后的博客中做具体介绍。</p>
-<p>以上。</p>
-<p>请多指教。</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhusi94.github.io/post/di-yi-pian-wen-zhang/">
+                  <h3 class="post-title">
+                    第一篇文章
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'ab260576543d0116a072',
+        clientSecret: 'ae36ff1eaf412e2c5203189e711b52472877ca3c',
+        repo: 'zhusi94.github.io',
+        owner: 'zhusi94',
+        admin: ['zhusi94'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
