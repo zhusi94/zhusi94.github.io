@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zhusi94.github.io/favicon.ico?v=1600762045845">
+<link rel="shortcut icon" href="https://zhusi94.github.io/favicon.ico?v=1600763457762">
 <link rel="stylesheet" href="https://zhusi94.github.io/styles/main.css">
 
 
@@ -37,7 +37,7 @@ krpano是一个专门用来构建全景项目工具软件，目前官方最新�
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://zhusi94.github.io">
-        <img src="https://zhusi94.github.io/images/avatar.png?v=1600762045845" class="site-logo">
+        <img src="https://zhusi94.github.io/images/avatar.png?v=1600763457762" class="site-logo">
         <h1 class="site-title">个人小站</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -113,7 +113,21 @@ krpano是一个专门用来构建全景项目工具软件，目前官方最新�
 <p>解压后的软件包如下：<br>
 <img src="https://zhusi94.github.io/post-images/1600761198775.png" alt="" loading="lazy"></p>
 <p>基础的项目生成，可参照 http://www.krpano360.com/  免费教程中的内容，进行照片的分割。</p>
-<p>我自己多数是多场景的应用，所以一般用 MAKE VTOUR (MULTIRES) droplet.bat 生成项目文件。</p>
+<p>我自己多数是多场景的应用，所以一般用 MAKE VTOUR (MULTIRES) droplet.bat 生成项目文件，将全景相机拍摄的照片，经过PS补地或其他处理后（补地教程请自行百度）拖拽（可多选拖拽）至 MAKE VTOUR (MULTIRES) droplet.bat 程序，会弹出黑窗口批处理，等程序执行完毕可在照片的目录文件夹下看到新生成的项目。<br>
+<img src="https://zhusi94.github.io/post-images/1600762448944.png" alt="" loading="lazy"><br>
+打开文件夹后<br>
+<img src="https://zhusi94.github.io/post-images/1600762568100.png" alt="" loading="lazy"></p>
+<p>可以直接将整个文件夹拷贝至服务器浏览tour.html文件，本地浏览的话，旧版本Edge可直接打开，chrome浏览器由于禁止js读取本地文件，不能直接打开。只能用krpano自己的浏览工具加载tour.xml文件。<br>
+<img src="https://zhusi94.github.io/post-images/1600762789331.png" alt="" loading="lazy"><br>
+双击 krpano Tools.exe 打开程序。<br>
+<img src="https://zhusi94.github.io/post-images/1600762841123.png" alt="" loading="lazy"><br>
+点击load tour.xml按钮，选择相应的文件路径及xml文件进行浏览。<br>
+<img src="https://zhusi94.github.io/post-images/1600762931824.png" alt="" loading="lazy"></p>
+<p>也可以使用<img src="https://zhusi94.github.io/post-images/1600763036387.png" alt="" loading="lazy"> krpano Testing Server.exe 程序搭建临时服务器环境，再使用谷歌或其他浏览器访问，<br>
+<img src="https://zhusi94.github.io/post-images/1600763150059.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://zhusi94.github.io/post-images/1600763253376.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://zhusi94.github.io/post-images/1600763403453.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://zhusi94.github.io/post-images/1600763455187.png" alt="" loading="lazy"></figure>
 <p>后续的文章，会介绍更多krpano在前端方面的使用， 敬请期待。</p>
 
             </div>
