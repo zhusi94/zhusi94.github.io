@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhusi94.github.io</id>
     <title>个人小站</title>
-    <updated>2020-09-22T07:36:39.930Z</updated>
+    <updated>2020-09-22T07:59:10.285Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhusi94.github.io"/>
     <link rel="self" href="https://zhusi94.github.io/atom.xml"/>
@@ -10,6 +10,26 @@
     <logo>https://zhusi94.github.io/images/avatar.png</logo>
     <icon>https://zhusi94.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 个人小站</rights>
+    <entry>
+        <title type="html"><![CDATA[介绍下krpano]]></title>
+        <id>https://zhusi94.github.io/post/jie-shao-xia-krpano/</id>
+        <link href="https://zhusi94.github.io/post/jie-shao-xia-krpano/">
+        </link>
+        <updated>2020-09-22T07:38:32.000Z</updated>
+        <content type="html"><![CDATA[<p>最近在公司在做360°全景相关的功能， 目前是买了全景相机作为硬件。<br>
+前端方面选择了krpano作为框架来展示全景照片。<br>
+<a href="https://krpano.com/home/">krpano</a>是一个专门用来构建全景项目工具软件，目前官方最新版本是1.20.8。<br>
+官网：https://krpano.com/home/ 有全英文的最新文档，前端开发人员可直接学习文档来进行开发。 不喜欢英文的话也有一个第三方中文网站： https://krpanodoc.azurewebsites.net/docu/xml.html （貌似需要科学上网）。版本对应1.19的<br>
+国内的教程网站有： http://www.krpano360.com/ 。 不过这个网站有部分内容需要收费。开发人员自行斟酌。</p>
+<p>软件下载的话。官方是收费的。有兴趣研究前端360°全景展示的 请自行解决软件，这里不主动提供。<br>
+推荐1.19以上的版本 新版本有exe程序可以主动搭建服务器环境，解决老版本生成的资源不能直接在谷歌浏览器里访问的问题。</p>
+<p>解压后的软件包如下：<br>
+<img src="https://zhusi94.github.io/post-images/1600761198775.png" alt="" loading="lazy"></p>
+<p>基础的项目生成，可参照 http://www.krpano360.com/  免费教程中的内容，进行照片的分割。</p>
+<p>我自己多数是多场景的应用，所以一般用 MAKE VTOUR (MULTIRES) droplet.bat 生成项目文件。</p>
+<p>后续的文章，会介绍更多krpano在前端方面的使用， 敬请期待。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[用echarts柱状图展示无序的录像时间统计]]></title>
         <id>https://zhusi94.github.io/post/yong-echarts-zhu-zhuang-tu-zhan-shi-wu-xu-de-lu-xiang-shi-jian-tong-ji/</id>
