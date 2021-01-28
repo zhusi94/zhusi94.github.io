@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhusi94.github.io</id>
     <title>个人小站</title>
-    <updated>2020-09-22T08:45:31.382Z</updated>
+    <updated>2021-01-28T08:39:30.168Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhusi94.github.io"/>
     <link rel="self" href="https://zhusi94.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://zhusi94.github.io/images/avatar.png</logo>
     <icon>https://zhusi94.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 个人小站</rights>
+    <rights>All rights reserved 2021, 个人小站</rights>
     <entry>
         <title type="html"><![CDATA[介绍下krpano]]></title>
         <id>https://zhusi94.github.io/post/jie-shao-xia-krpano/</id>
@@ -221,9 +221,28 @@ function getseries (sourceData,invalidData) {
 var option = {
     tooltip: {
         trigger: 'axis',
-        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
+        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+        },
+        formatter: function(params, a, b, c) {
+            // console.log(params, a, b, c)
+            var deviceName = params[0].name
+            var recordTime = 0;
+            var noRecordTime = 0;
+            for(var i = 0; i &lt; params.length; i++) {
+                if(params[i].value &gt; 0) {
+                    if(params[i].seriesName == '无录制') {
+                        noRecordTime += Number(params[i].value)
+                    } else if(params[i].seriesName == '正常录制') {
+                        recordTime +=  Number(params[i].value)
+                    }
+                }
+            }
+            // console.log('正常录制',recordTime)
+            // console.log('无录制',noRecordTime)
+            return deviceName + '&lt;br/&gt;' + '正常录制时长:' + recordTime + 'h' + '&lt;br/&gt;' + '无录像时长:' + noRecordTime + 'h'
+        },
+        show: true
     },
     legend: {
         data: ['正常录制', '无录制'],
@@ -246,9 +265,36 @@ var option = {
 };
 
 </code></pre>
-<p>可直接在<a href="https://gallery.echartsjs.com/editor.html?c=xwQMgX6NpR&amp;v=1">示例中心</a>，查看预览效果。</p>
+<p>可直接在<a href="https://www.makeapie.com/editor.html?c=xwQMgX6NpR">示例中心</a>，查看预览效果。</p>
 <p>本示例仅使用了默认颜色，相关美化请自行完成。</p>
-<p>编辑tooltip函数的代码已省略， 请自行编辑</p>
+<p>最近新增了 tooltip 的 format函数以处理鼠标指示器</p>
+<p>···<br>
+tooltip: {<br>
+trigger: 'axis',<br>
+axisPointer: { // 坐标轴指示器，坐标轴触发有效<br>
+type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'<br>
+},<br>
+formatter: function(params, a, b, c) {<br>
+// console.log(params, a, b, c)<br>
+var deviceName = params[0].name<br>
+var recordTime = 0;<br>
+var noRecordTime = 0;<br>
+for(var i = 0; i &lt; params.length; i++) {<br>
+if(params[i].value &gt; 0) {<br>
+if(params[i].seriesName == '无录制') {<br>
+noRecordTime += Number(params[i].value)<br>
+} else if(params[i].seriesName == '正常录制') {<br>
+recordTime +=  Number(params[i].value)<br>
+}<br>
+}<br>
+}<br>
+// console.log('正常录制',recordTime)<br>
+// console.log('无录制',noRecordTime)<br>
+return deviceName + '<br/>' + '正常录制时长:' + recordTime + 'h' + '<br/>' + '无录像时长:' + noRecordTime + 'h'<br>
+},<br>
+show: true<br>
+},<br>
+···</p>
 <p>不过， 该方法有个隐患是当数据量大的时候会生成大量series造成卡顿。<br>
 如有其他更好可以实现类似需求。欢迎联系我。</p>
 ]]></content>
